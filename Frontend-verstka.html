@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frontend</title>
+	<style>
+		.verstka{
+			margin: auto;
+			background: #fff;
+			max-width: 376px;
+			padding: 20px;
+			border-radius: 12px;
+			}
+		body {
+		height: 100vh;
+		background: linear-gradient(135deg, #71b7e6, #9b59b6);
+		}
+		h2 {
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 20px;
+		}
+		.question-details .input-box input {
+		height: 46px;
+		width: 100%;
+		display: inline-block;
+		box-sizing: border-box;
+		outline: none;
+		border-radius: 6px;
+		border: 1px solid #ccc;
+		padding: 5px;
+		border-bottom-width: 2px;
+		transition: all 0.3s ease;
+		}
+		form .question-details .input-box{
+		padding-bottom: 10px;
+		}
+		.question-details .input-box input:hover,
+		.question-details .input-box input:valid{
+			border-color: #9b59b6
+		}
+		.question-details .input-box input:focus,
+		.question-details .input-box input:valid{
+			background-color: #d8c7ff
+		}
+		form .button{
+		height: 45px;
+		margin: 15px 0;
+		}
+		form .button input{
+		height: 100%;
+		width: 100%;
+		outline: none;
+		border-radius: 6px;
+		border: 1px solid #ccc;
+		color: #fff;
+		background: linear-gradient(135deg, #71b7e6, #9b59b6);
+		}
+		input[type=submit]:hover{
+		border-color: #9b59b6
+		}
+		input[type=submit]:focus{
+		background: linear-gradient(135deg, #9b59b6, #71b7e6)
+		}
+			
+	</style>
+</head>
+<body>
+	<div class="verstka">
+		<h2>Задать вопрос</h2>
+		<form action="https://60376bfd5435040017722533.mockapi.io/form" method="POST">
+		<div class="question-details">
+			<div class="input-box">
+			<input type="text" 
+				id="name" 
+				name="name" 
+				placeholder="Фамилия Имя Отчество" 
+				maxlength="64" 
+				pattern="[А-Яа-я -]{1,64}" 
+				required>
+			</div>
+			<div class="input-box">
+			<input type="tel" 
+				id="phone" 
+				name="phone" 
+				placeholder="Номер телефона" 
+				maxlength="32" 
+				pattern="[0-9 +-]{1,32}" 
+				required>
+			</div>
+			<div class="input-box">
+			<input type="email" 
+				id="email" 
+				name="email" 
+				placeholder="E-mail" 
+				required>
+			</div>
+			<div class="button">
+			<input type="submit" 
+				value="ОТПРАВИТЬ ЗАПРОС">
+			</div>
+		</div>
+		</form>
+	</div>
+</body>
+</html>
